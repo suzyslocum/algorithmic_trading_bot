@@ -14,14 +14,15 @@
 ## Results
 ---
 
-* Original Model - SVC classifier model from SKLearn's support vector machine (SVM) learning method, first 3 months of data used as training dataset:
+* Original Model - SVC classifier model from SKLearn's support vector machine (SVM) learning method, first 3 months of data used as training dataset, SMA: short window = 4, long window = 100:
   * The model's accuracy was assessed to be 55%
   * The model's precision was assessed to be 43% for (-1) and 56% for (1).
   * The model's recall was assessed to be 4% for (-1) and 96% for (1).
 
-![cr_3month](/Images/cr_3month.jpg)    
-![plot_3month](/Images/plot_3month.jpg)
+![cr_3months](/Images/cr_3months.jpg)    
+![plot_3months](/Images/plot_3months.jpg)
 
+### Adjust the size of the training dataset
 
 * Alternative Model 1 - Same as original, except first 1 month of data used as training dataset:
   * The model's accuracy was assessed to be 55%
@@ -48,6 +49,32 @@
 ![cr_18months](/Images/cr_18months.jpg)    
 ![plot_18months](/Images/plot_18months.jpg)
     
+### Question: What impact resulted from increasing or decreasing the training window?
+
+  Accuracy and precision increased by increasing the training window. Recall increased for the (1) values, but decreased for the (-1) values.
+  
+### Adjust the SMA windows
+  
+* Alternative Model 4 - Same as original, except SMA windows changed to short window = 4, long window = 50:
+  * The model's accuracy was assessed to be 54%
+  * The model's precision was assessed to be 42% for (-1) and 56% for (1).
+  * The model's recall was assessed to be 13% for (-1) and 86% for (1).
+
+* Alternative Model 5 - Same as original, except SMA windows changed to short window = 25, long window = 100:
+  * The model's accuracy was assessed to be 56%
+  * The model's precision was assessed to be 44% for (-1) and 56% for (1).
+  * The model's recall was assessed to be 4% for (-1) and 96% for (1).
+
+* Alternative Model 6 - Same as original, except SMA windows changed to short window = 50, long window = 100:
+  * The model's accuracy was assessed to be 54%
+  * The model's precision was assessed to be 45% for (-1) and 56% for (1).
+  * The model's recall was assessed to be 17% for (-1) and 83% for (1).
+
+* Alternative Model 7 - Same as original, except SMA windows changed to short window = 15, long window = 75:
+  * The model's accuracy was assessed to be 56%
+  * The model's precision was assessed to be 45% for (-1) and 56% for (1).
+  * The model's recall was assessed to be 6% for (-1) and 94% for (1).
+
 
 ## Summary
 ---
