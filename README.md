@@ -75,6 +75,25 @@
   * The model's precision was assessed to be 45% for (-1) and 56% for (1).
   * The model's recall was assessed to be 6% for (-1) and 94% for (1).
 
+### Question: What impact resulted from increasing or decreasing either or both of the SMA windows?
+
+  Accuracy was pretty much unchanged by increasing or decreasing the SMA windows. Precision was also largely unchanged. Recall was a little more balanced between the two categories when the long window was decreased to 50 while leaving the short window unchanged (13% for (-1) and 86% for (1)), or increased the short window to 50 while leaving the long window unchanged (17% for (-1) and 83% for (1)).
+  
+![cr_long_short_window](/Images/cr_long_short_window.jpg)    
+![plot_long_short_window](/Images/plot_long_short_window.jpg)  
+
+
+* Alternative Model 8 - Logistic Regression linear model from SKLearn's linear model learning method, first 3 months of data used as training dataset, SMA: short window = 4, long window = 100:
+  * The model's accuracy was assessed to be 52%
+  * The model's precision was assessed to be 44% for (-1) and 56% for (1).
+  * The model's recall was assessed to be 33% for (-1) and 66% for (1).
+
+![cr_lr](/Images/cr_lr.jpg)    
+![plot_lr](/Images/plot_lr.jpg)
+
+### Questions: Did this new model perform better or worse than the provided baseline model? Did this new model perform better or worse than your tuned trading algorithm?
+
+  The accuracy of this model (52%) was lower than the original model (55%) or the tuned model (56%). Precision was right in between the other two models at 44% for (-1) and 56% for (1), versus the original model being 43% for (-1) and the tuned model being 45% for (-1).  Precision for the previous two models was 56% as it is with this logisitc regression model. Recall for this model was 33% for (-1) and 66% for (1) compared to the original and tuned models whose recall was and 6% for (-1) and 94% for (1) for both.
 
 ## Summary
 ---
