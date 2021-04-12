@@ -93,16 +93,20 @@
 
 ### Questions: Did this new model perform better or worse than the provided baseline model? Did this new model perform better or worse than your tuned trading algorithm?
 
-  The accuracy of this model (52%) was lower than the original model (55%) or the tuned model (56%). Precision was right in between the other two models at 44% for (-1) and 56% for (1), versus the original model being 43% for (-1) and the tuned model being 45% for (-1).  Precision for the previous two models was 56% as it is with this logisitc regression model. Recall for this model was 33% for (-1) and 66% for (1) compared to the original and tuned models whose recall was and 6% for (-1) and 94% for (1) for both.
+  The accuracy of this model (52%) was lower than the original model (55%) or the tuned model (56%). Precision was right in between the other two models at 44% for (-1) and 56% for (1), versus the original model being 43% for (-1) and the tuned model being 45% for (-1). Precision for the previous two models for (1) was 56% as it is with this logisitc regression model. Recall for this model was 33% for (-1) and 66% for (1) compared to the original and tuned models whose recall was and 6% for (-1) and 94% for (1) for both models.
 
 ## Summary
 ---
-Given the lack of improvement in accuracy and loss, I would not recommend that any of the alternative models be used. The original model itself is also not very accurate at only 73%. I would reccommend that more alterations be made until improvement is found, or that an entirely different type of model be used for these predictions given the potential loss of investment capital. 
+Given the lack of improvement in accuracy precision, and recall, I would not recommend that any of the alternative models be used. The original model itself is also not very accurate. I would reccommend that more alterations be made until improvement is found, or that an entirely different type of model be used for these predictions given the potential loss of capital were these models to be used in practice. 
 
+### Original Model:
+![plot_3months](/Images/plot_3months.jpg)
 
-![original_model_summary](/Images/original_model_summary.jpg)
-![original model_accuracy](/Images/original_model_accuracy.jpg)
+### Tuned Model:
+![plot_long_short_window](/Images/plot_long_short_window.jpg)  
 
+### Logistic Regression Model:
+![plot_lr](/Images/plot_lr.jpg)
 
 ---
 
@@ -115,7 +119,13 @@ Pandas - to write and run the program [Pandas documentation](https://pandas.pyda
 
 Pathlib - to create file paths [Pathlib documentation](https://docs.python.org/3/library/pathlib.html)
 
-TensorFlow - to generate deep learning models - [TensorFlow documentation](https://www.tensorflow.org/guide)
+NumPy - for mathematical functions [NumPy documentation](https://numpy.org/doc/)
+
+hvPlot - to create graphs [hvPlot documentation](https://hvplot.holoviz.org/)
+
+matplotlib - to create graphs [matplotlib documentation](https://matplotlib.org/stable/contents.html)
+
+DateOffset - to create a date range [DateOffset documentation](https://pandas.pydata.org/docs/reference/api/pandas.tseries.offsets.DateOffset.html)
 
 SciKit-Learn - to train models, encode data, and scale data [SciKit Learn documentation](https://scikit-learn.org/0.21/documentation.html)
 
@@ -128,9 +138,15 @@ Install the Pandas package using the following command: 'import pandas as pd'
 
 Install the Pathlib module using the following command: 'from pathlib import Path'
 
-Install the TensorFlow libraries using the following commands: 'import tensorflow as tf', 'from tensorflow.keras.layers import Dense','from tensorflow.keras.models import Sequential'
+Install the numpy library using the following command: 'import numpy as np'
 
-Install the SciKit-Learn metrics libraries using the following commands: 'from sklearn.model_selection import train_test_split', 'from sklearn.preprocessing import StandardScaler,OneHotEncoder
+Install the hvPlot library using the following command: 'import hvplot.pandas'
+
+Install the matplotlib library using the following command: 'import matplotlib.pyplot as plt'
+
+Install the DateOffset package usi8ng the following command: 'from pandas.tseries.offsets import DateOffset'
+
+Install the SciKit-Learn metrics libraries using the following commands: 'from sklearn import svm', 'from sklearn.preprocessing import StandardScaler', 'from sklearn.metrics import classification_report', 'from sklearn.linear_model import LogisticRegression'
 
 
 --- 
