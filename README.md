@@ -1,7 +1,7 @@
-# Module 14 Challenge Assignment 
----
+# Create and Optimize an Algorithmic Trading Bot
 
-## Create and Optimize an Algorithmic Trading Bot
+*Module 14 Challenge Assignment *
+
 ---
 
 ## Overview of the Analysis
